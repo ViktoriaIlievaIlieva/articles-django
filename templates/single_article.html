@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block title %} Home {% endblock %}
+
+{% block body %}
+    <h1> {{ article.title }} </h1>
+    {{ article.publish_date }}<br/>
+    {{ article.content | linebreaks }}
+
+    <a href="/delete-article/?id={{ article.id }}">Delete</a>
+{% endblock %}

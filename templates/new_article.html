@@ -1,0 +1,22 @@
+{% extends "layout.html"%}
+
+{% block title %} New article {% endblock %}
+
+{% block body %}
+    <form action="/new-article/" method="POST">
+        {% csrf_token %}
+        <label for="title_field"> Title </label>
+        <input id="title_field" name="title" required = "required"><br>
+
+        <label for="content_field">Content</label>
+        <input id="content_field" name="content" required="required"> <br>
+
+        <label for="publish_date_field"> Publish Date </label>
+        <input id="publish_date_field" name="publish_date" type="date" required="required">
+
+        <button type="submit"> Save </button>
+    </form>
+
+    <a href="/all-articles/">Cancel</a>
+
+{% endblock %}

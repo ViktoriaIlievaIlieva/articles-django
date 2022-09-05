@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Articles{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+</head>
+<body>
+<div id="main-content">
+    <header style="">
+        {% block header %}
+            <a style="margin-right: 20px " href="/"> Home </a>
+            <a style="margin-right: 20px " href="/all-articles/"> All Articles </a>
+            <a style="margin-right: 20px " href="/new-article/">New Article</a>
+
+        {% endblock %}
+    </header>
+
+    {% block body %}
+    {% endblock %}
+</div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %} Home {% endblock %}
+
+{% block body %}
+    <h1> Home </h1>
+    <ul>
+        {% for article in last_three_in_ascending_order %}
+            <li><a href="/single-article/?id={{ article.id }}">{{ article.title }}</a></li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
